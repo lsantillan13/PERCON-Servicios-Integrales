@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERCON Servicios Integrales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-  Z--- Header && Nav ---Z ->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container px-4 py-3">
+            <div class="flex justify-between items-center mx-32">
+                <div class="flex items-center space-x-2">
+                    <img src="https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?auto=format&fit=crop&w=80" alt="PERCON Logo" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-navy-800">PERCON</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Inicio</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Servicios</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Principios</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Contacto</a>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200">Contáctanos</button>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-50">
+                <div class="p-4">
+                    <div class="flex justify-end">
+                        <button id="close-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col space-y-4 mt-8">
+                        <a href="#" class="text-xl text-gray-800 hover:text-blue-600 font-medium">Inicio</a>
+                        <a href="#" class="text-xl text-gray-800 hover:text-blue-600 font-medium">Institucional</a>
+                        <a href="#" class="text-xl text-gray-800 hover:text-blue-600 font-medium">Servicios</a>
+                        <a href="#" class="text-xl text-gray-800 hover:text-blue-600 font-medium">Nosotros</a>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 text-lg">Contáctanos</button>
+                        <div class="flex space-x-6 mt-4">
+                            <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <!-  === Hero Section === ->
+   
+    <div class="relative w-100 h-[90vh] overflow-hidden">
+        <div class="slider relative w-full h-full justify-center">
+            <div class="slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Mantenimiento industrial" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" alt="Servicios técnicos" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1" alt="Soluciones empresariales" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+        </div>
+        
+        <div class="absolute inset-0 flex flex-col px-4 sm:px-6 lg:px-8 text-white md:w-[50%] lg:w-[50%]">
+            <h1 class="font-bold text-md uppercase basis-3xs mt-28 w-max pb-8 pl-8">
+                Percon servicios integrales
+            </h1>
+            <h2 class="text-xl md:text-5xl lg:text-3xl font-bold mb-8 tracking-tight pl-8">
+                Transformamos tu Infraestructura con Soluciones de Mantenimiento de Primera Calidad
+            </h2>
+            <h2 class="text-xl md:text-2xl lg:text-xl md:mb-6 max-w-3xl text-gray-200 pl-8">
+                En PERCON Servicios Integrales, aseguramos la eficiencia y confiabilidad de tus sistemas. Ofrecemos servicios innovadores para la sostenibilidad y óptimo funcionamiento de tus instalaciones.
+            </h2>
+            <h2 class="text-xl md:text-2xl lg:text-xl mb-6 max-w-3xl text-gray-200 pl-8">
+                Descubrí cómo podemos ayudarte a alcanzar la excelencia operativa.
+            </h2>
+            <h2 class="text-xl md:text-2xl lg:text-xl mb-6 max-w-3xl text-gray-200 pl-8">
+                <i class="not-italic font-bold">Consultá con nuestros Expertos hoy, <i class="not-italic text-blue-300 font-bold">Gratis</i>.</i>
+            </h2>
+            <span class="w-full flex justify-center">
+                <button class="bg-blue-600 hover:bg-blue-700 w-max text-start text-white font-bold p-4 rounded-lg text-lg lg:text-xl transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Quiero mi Consulta Gratis
+                </button>
+            </span>
+        </div>
+
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none slider-dot" data-index="0"></button>
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none slider-dot" data-index="1"></button>
+            <button class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none slider-dot" data-index="2"></button>
+        </div>
+
+        <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full focus:outline-none" id="prevBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full focus:outline-none" id="nextBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <style>
+        .slide {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slider-dot.active {
+            opacity: 1;
+        }
+    </style>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            prevSlide();
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            nextSlide();
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(index);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+
+        showSlide(0);
+    </script>
+
+    <!-- Services Section -->
+</body>
+</html>

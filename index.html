@@ -6,6 +6,7 @@
     <title>PERCON Servicios Integrales</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- Header -->
@@ -22,33 +23,109 @@
     </header>
 
 
+    <style>
+        #hero {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+    
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .caption {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+    
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+    
+        @keyframes slideAnimation {
+            0% { display: block; opacity: 1; }
+            33% { display: block; opacity: 1; }
+            66% { display: none; opacity: 0; }
+            100% { display: block; opacity: 1; }
+        }
+    
+        .slide:nth-child(1) {
+            animation: slideAnimation 9s infinite;
+        }
+    
+        .slide:nth-child(2) {
+            animation: slideAnimation 9s infinite 3s;
+        }
+    
+        .slide:nth-child(3) {
+            animation: slideAnimation 9s infinite 6s;
+        }
+    </style>
+    
     <section id="hero">
         <div class="carousel">
             <div class="slide">
                 <img src="./public/image (26).jpg" alt="Slide 1">
-                <div class="caption">Slide 111</div>
+                <div class="caption">Soluciones Integrales de Mantenimiento para tu Negocio</div>
             </div>
             <div class="slide">
                 <img src="./public/image (21).jpg" alt="Slide 2">
-                <div class="caption">Slide 2</div>
+                <div class="caption">Eficiencia, Confiabilidad y Sostenibilidad en Cada Proyecto</div>
             </div>
             <div class="slide">
                 <img src="./public/image (24).jpg" alt="Slide 3">
-                <div class="caption">Slide 3</div>
+                <div class="caption">Contáctanos para Saber Más</div>
             </div>
-            <button class="prev-button">Previous</button>
-            <button class="next-button">Next</button>
         </div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>Soluciones Integrales de Mantenimiento para tu Negocio</h1>
-                <h2>Eficiencia, Confiabilidad y Sostenibilidad en Cada Proyecto</h2>
-                <a href="#contacto" class="cta-button">Contáctanos</a>
-            </div>
+            <h1>Bienvenido a PERCON Servicios Integrales</h1>
+            <h2>Ofrecemos soluciones completas para el mantenimiento preventivo y correctivo en empresas</h2>
+            <a href="#contacto" class="cta-button">Contacto</a>
         </div>
-        
     </section>
-
+    
+    
 
     <!-- Nuestros Servicios -->
     <section id="nuestros-servicios">
