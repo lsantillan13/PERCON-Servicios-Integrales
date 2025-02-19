@@ -14,10 +14,12 @@
         <nav class="container px-4 py-3">
             <div class="flex justify-between items-center md:mx-32">
                 <div class="flex items-center space-x-2">
+                    <a href="/">
                     <span class="flex">
                         <h1 class="text-navy-800 text-xl md:text-2xl font-bold">PERCON</h1>
                         <i class="text-navy-100 text-md md:text-xl p-0.5">Servicios Integrales</i>
                     </span>
+                    </a>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -84,9 +86,23 @@
         }
     </script>
 
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+
     <!--  -->
-    <div class="min-h-screen">
-        <header class="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
+    <div class="min-h-screen mt-8">
+        <header class="bg-cyan-900 py-16">
             <div class="container mx-auto px-4">
                 <h1 class="text-4xl md:text-5xl font-bold text-white text-center mb-4">Preguntas Frecuentes</h1>
                 <p class="text-lg text-blue-100 text-center max-w-2xl mx-auto">Encuentre respuestas a las preguntas más comunes sobre nuestros servicios. Si no encuentra lo que busca, no dude en contactarnos.</p>
@@ -104,7 +120,7 @@
             <div class="max-w-3xl mx-auto space-y-6">
                 <!-- Servicios Generales -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <h2 class="bg-blue-600 text-white px-6 py-4 text-xl font-semibold">Servicios Generales</h2>
+                    <h2 class="bg-cyan-600 text-white px-6 py-4 text-xl font-semibold">Servicios Generales</h2>
                     <div class="divide-y divide-gray-200">
                         <details class="group">
                             <summary class="flex items-center justify-between px-6 py-4 cursor-pointer hover:bg-gray-50">
@@ -114,7 +130,21 @@
                                 </span>
                             </summary>
                             <div class="px-6 py-4 bg-gray-50">
-                                <p class="text-gray-700">Ofrecemos una amplia gama de servicios incluyendo consultoría empresarial, desarrollo de software, servicios de TI y soluciones digitales personalizadas.</p>
+                                <p class="text-gray-700">Ofrecemos una amplia gama de servicios incluyendo Mantenimiento industrial, edilicio, refrigeración y calefacción. Esto incluye proyectos, instalación, mantenimiento y reparación de sistemas e infraestructura.</p>
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer hover:bg-gray-50">
+                                <h3 class="text-lg font-medium text-gray-900">¿En que se especializan?</h3>
+                                <span class="ml-6 flex-shrink-0">
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                </span>
+                            </summary>
+                            <div class="px-6 py-4 bg-gray-50">
+                                <p class="text-gray-700 px-2">En Percon nos especializamos en servicios de:</p>
+                                <p class="text-gray-700 px-2">• Refrigeración y climatización: Sistemas HVAC, cámaras de frío, equipos industriales y más.</p>
+                                <p class="text-gray-700 px-2">• Electromecánica: Motores, tableros eléctricos, instalaciones y proyectos electromecánicos.</p>
+                                <p class="text-gray-700 px-2">• Mantenimiento edilicio: Infraestructura, trailers, instalaciones y reparaciones generales.</p>
                             </div>
                         </details>
                     </div>
@@ -122,11 +152,33 @@
 
                 <!-- Proceso de Contratación -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <h2 class="bg-blue-600 text-white px-6 py-4 text-xl font-semibold">Proceso de Contratación</h2>
+                    <h2 class="bg-cyan-600 text-white px-6 py-4 text-xl font-semibold">Sobre Percon</h2>
                     <div class="divide-y divide-gray-200">
                         <details class="group">
                             <summary class="flex items-center justify-between px-6 py-4 cursor-pointer hover:bg-gray-50">
-                                <h3 class="text-lg font-medium text-gray-900">¿Cómo puedo contratar sus servicios?</h3>
+                                <h3 class="text-lg font-medium text-gray-900">¿Cuál es su objetivo?</h3>
+                                <span class="ml-6 flex-shrink-0">
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                </span>
+                            </summary>
+                            <div class="px-6 py-4 bg-gray-50">
+                                <p class="text-gray-700">Nuestro objetivo es asegurar la eficiencia, confiabilidad y sostenibilidad de los sistemas de nuestros clientes, brindando un servicio profesional y de calidad.</p>
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer hover:bg-gray-50">
+                                <h3 class="text-lg font-medium text-gray-900">¿Qué los distingue?</h3>
+                                <span class="ml-6 flex-shrink-0">
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                </span>
+                            </summary>
+                            <div class="px-6 py-4 bg-gray-50">
+                                <p class="text-gray-700">Nuestro compromiso con la excelencia, la innovación tecnológica y la satisfacción del cliente.</p>
+                            </div>
+                        </details>
+                        <details class="group">
+                            <summary class="flex items-center justify-between px-6 py-4 cursor-pointer hover:bg-gray-50">
+                                <h3 class="text-lg font-medium text-gray-900">¿Cómo puedo contactarlos?</h3>
                                 <span class="ml-6 flex-shrink-0">
                                     <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
                                 </span>
@@ -142,7 +194,7 @@
             <div class="max-w-3xl mx-auto mt-12 p-6 bg-white rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold text-gray-900 mb-4">¿No encontró lo que buscaba?</h3>
                 <p class="text-gray-700 mb-4">Estamos aquí para ayudarle. Contáctenos directamente y responderemos a todas sus preguntas.</p>
-                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Contactar Soporte</button>
+                <button class="bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Contactar Soporte</button>
             </div>
         </div>
     </div>
