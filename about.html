@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros - PERCON Servicios Integrales</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Nav Component  -->
+<!-  Z--- Header && Nav ---Z ->
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container px-4 py-3">
+        <div class="flex justify-between items-center md:mx-32">
+            <div class="flex items-center space-x-2">
+                <span class="flex">
+                    <h1 class="text-navy-800 text-xl md:text-2xl font-bold">PERCON</h1>
+                    <i class="text-navy-100 text-md md:text-xl p-0.5">Servicios Integrales</i>
+                </span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Inicio</a>
+                <a href="about.html" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">Institucional</a>
+                <div class="relative group">
+                    <button class="text-gray-800 hover:text-blue-600 font-medium" onclick="toggleDropdown()">Servicios <i class="fa-solid fa-caret-down"></i> </button>
+                    <div id="dropdown" class="hidden absolute bg-white shadow-lg mt-4 rounded">
+                        <a href="services-1.html" class="block px-4 w-max py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600">Refrigeración y Aire Acondicionado</a>
+                        <a href="services-2.html" class="block px-4 w-auto py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600">Electromecánica Industrial</a>
+                        <a href="services-3.html" class="block px-4 w-auto py-2 text-gray-800 hover:bg-gray-100 hover:text-blue-600">Mantenimiento Edilicio y Trailers</a>
+                    </div>
+                </div>
+                <a href="faq.html" class="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200">FAQ</a>
+                <a href="contact.html"><button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200">Contáctanos</button></a>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-50">
+            <div class="p-4">
+                <div class="flex justify-between">
+                    <button id="close-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-4 mt-8 text-xl text-gray-800 font-medium">
+                    <a href="/" class="hover:text-blue-600">Inicio</a>
+                    <a href="about.html" class="hover:text-blue-600">Institucional</a>
+                    <a href="services-1.html" class="hover:text-blue-600">Regriferación y A/C</a>
+                    <a href="services-2.html" class="hover:text-blue-600">Electromecánica Industrial</a>
+                    <a href="services-3.html" class="hover:text-blue-600">Mantenimiento Edilicio y Trailers</a>
+                    <a href="faq.html" class="hover:text-blue-600">FAQ</a>
+                    <a href="contact.html" class="text-blue-600 hover:underline transition-colors duration-200">Contáctanos</a>
+                    <hr class="w-[25%]">
+                    <div class="flex space-x-6 mt-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdown');
+        dropdown.classList.toggle('hidden');
+    }
+</script>
+
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+
+<!--  First Section -->
+    <section class="relative h-[80vh] flex items-center justify-center overflow-hidden mt-[73px]">
+        <div class="absolute inset-0 h-full ">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team working together" class="w-full h-full object-cover object-right blur-sm">
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-in">Acerca de Nosotros</h1>
+            <p class="text-xl text-white max-w-3xl mx-auto">Innovando para un futuro mejor</p>
+        </div>
+    </section>
+
+    <section class="py-6 px-4 bg-card">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Our team" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-primary">Quiénes Somos</h2>
+                    <p class="text-lg leading-relaxed">En <strong>PERCON Servicios Integrales</strong>, nos enorgullece ser tu aliado estratégico en el mantenimiento y optimización de sistemas e infraestructuras. Con una trayectoria sólida y años de experiencia en el sector, nos hemos consolidado como referentes en soluciones integrales que combinan innovación, calidad y sostenibilidad. Nuestro equipo de expertos altamente capacitados trabaja con pasión y dedicación para garantizar que cada proyecto supere las expectativas de nuestros clientes, asegurando la eficiencia operativa y la durabilidad de sus activos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-1 bg-secondary">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-card p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-accent text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">Nuestra Misión</h3>
+                    <p class="text-lg">Proveer soluciones integrales de mantenimiento que aseguren la confiabilidad, el óptimo funcionamiento y la sostenibilidad de infraestructuras y equipos. Nos esforzamos por ser un socio estratégico para nuestros clientes, contribuyendo a su éxito mediante la implementación de prácticas innovadoras y responsables.</p>
+                </div>
+                <div class="bg-card p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-accent text-4xl mb-4">🔭</div>
+                    <h3 class="text-2xl font-bold mb-4">Nuestra Visión</h3>
+                    <p class="text-lg">Ser la empresa líder en soluciones de mantenimiento en Argentina, reconocida no solo por la calidad y eficiencia de nuestros servicios, sino también por nuestro compromiso con el medio ambiente y la satisfacción de nuestros clientes. Visualizamos un futuro donde PERCON sea sinónimo de excelencia, innovación y responsabilidad social.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-10 text-primary">Nuestros Valores</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg shadow-xl border border-yellow-400">
+                    <div class="text-accent text-3xl mb-4">💫</div>
+                    <h3 class="text-xl font-bold mb-2">Compromiso</h3>
+                    <p>Nos dedicamos a cumplir y superar las expectativas de nuestros clientes, asegurando siempre los más altos estándares de calidad y servicio.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-xl border border-yellow-400">
+                    <div class="text-accent text-3xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-2">Innovación</h3>
+                    <p>Buscamos constantemente mejorar y aplicar las mejores prácticas del sector para ofrecer soluciones vanguardistas.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-xl border border-yellow-400">
+                    <div class="text-accent text-3xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold mb-2">Sostenibilidad</h3>
+                    <p>Promovemos un enfoque responsable en todos nuestros proyectos, minimizando el impacto ambiental y fomentando el uso eficiente de recursos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-accent">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-black">¿Por qué elegirnos?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-card p-6 rounded-lg shadow-lg border-2">
+                    <ul class="space-y-4">
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Años de experiencia en el sector</li>
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Equipo de expertos altamente calificados</li>
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Soluciones personalizadas y eficientes</li>
+                    </ul>
+                </div>
+                <div class="bg-card p-6 rounded-lg shadow-lg border-2">
+                    <ul class="space-y-4">
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Enfoque en la innovación y la calidad</li>
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Compromiso con la sostenibilidad</li>
+                        <li class="flex items-center"> <i class="not-italic text-blue-500 font-bold pr-1">✓</i> Resultados garantizados y confiables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-8 pb-4 px-4">
+        <div class="max-w-7xl m-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 justify-arround">
+            <div class="md:text-start text-center">
+                <h3 class="text-xl font-semibold mb-2 md:mb-3 underline underline-offset-5">PERCON</h3>
+                <p class="text-gray-400">Ofrecemos soluciones integrales en refrigeración, electromecánica y mantenimiento edilicio para asegurar la eficiencia y sostenibilidad de tus sistemas.</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold mb-2 md:mb-3 md:w-full underline underline-offset-5">Contacto</h3>
+                    <p class="text-gray-400"> <i class="fa fa-map"></i> <a href="#" class="hover:text-white">Av. Ejemplo 123, Neuquén, Argentina</a></p>
+                    <p class="text-gray-400"> <i class="fa fa-phone"></i> <a href="#" class="hover:text-white">+54 9 299 467-6252</a></p>
+                    <p class="text-gray-400"> <i class="fa fa-envelope"></i> <a href="mailto:perconservicios@gmail.com" class="hover:text-white">Contacto@percon.com</a></p>
+            </div>
+            <div class="">
+                <h3 class="text-xl font-semibold mb-2 underline underline-offset-5 md:text-right text-center">Conectá</h3>
+                <div class="flex space-x-4 md:space-x-6 text-2xl md:text-2xl py-2 justify-center md:justify-end">
+                    <a href="https://facebook.com" class="hover:text-[#fff] text-slate-400"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" class="hover:text-[#fff] text-slate-400"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" class="hover:text-[#fff] text-slate-400"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" class="hover:text-[#fff] text-slate-400"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="flex space-x-4 md:justify-end justify-center">
+                   <a href="#" class="hover:text-white text-gray-300 hover:underline underline-offset-4 decoration-zinc-400/40 animate-fade-in">Facebook</a>
+                   <a href="#" class="hover:text-white text-gray-300 hover:underline underline-offset-4 decoration-zinc-400/40 animate-fade-in">Twitter</a>
+                   <a href="#" class="hover:text-white text-gray-300 hover:underline underline-offset-4 decoration-zinc-400/40 animate-fade-in">LinkedIn</a>
+               </div>
+            </div>
+        </div>
+        <div class="my-2 pt-2 md:mt-4 md:pt-4 border-t border-gray-800 rounded text-center text-gray-400 text-sm md:text-md">
+            <p>© <i class="not-italic" id="yearFunct"></i> PERCON Servicios Integrales. Todos los derechos reservados.</p>
+        </div>
+        <div class="text-gray-400 text-xs text-center mt-1">Desarrollado por <a href="https://www.patagoniafullstack.com" class="text-white hover:underline">PatagoniaFullstack</a></div>
+    </footer>
+    <script>
+        let year = new Date().getFullYear();
+        document.getElementById('yearFunct').innerHTML = year;
+    </script>
+
+<a href="https://wa.me/TU_NUMERO_DE_TELEFONO" target="_blank" class="btn-whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <style>
+    .btn-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 100%;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+  
+    .btn-whatsapp:hover {
+      background-color: #199c46;
+    }
+    
+    @media (max-width: 768px) {
+      .btn-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
